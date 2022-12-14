@@ -1,0 +1,21 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "vmName": {
+      "value": "WebAppVM"
+    },
+    "adminUsername": {
+      "value": "student"
+    },
+    "adminPassword": {
+      "value": "Password.111"
+    },
+    "AutomationRegistrationUrl": {
+      "value": "https://e74ef9ca-83d6-41cd-b213-6114e806b666.agentsvc.eus.azure-automation.net/accounts/e74ef9ca-83d6-41cd-b213-6114e806b666"
+    },
+    "AutomationRegistrationKey": {
+      "value": "QTOD7eRUWAjrONQpMHArQPb8r2a5zMdpeCUO2+Fe4KQyB9QYErbgJrAHouy0IBlAXmqQtOFrzmizg3kbiEj3QQ=="
+    }
+  }
+}

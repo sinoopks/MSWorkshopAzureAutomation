@@ -1,0 +1,33 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {},
+    "variables": {},
+    "resources": [
+        {
+            "name": "#{Release.EnvironmentName}#-vnet",
+            "type": "Microsoft.Network/virtualNetworks",
+            "apiVersion": "2018-08-01",
+            "location": "[resourceGroup().location]",
+            "tags": {
+                "environment": "#{Release.EnvironmentName}#"
+            },
+            "properties": {
+                "addressSpace": {
+                    "addressPrefixes": [
+                        "#{addressRange}#"
+                    ]
+                },
+                "subnets": [
+                    {
+                        "name": "default",
+                        "properties": {
+                            "addressPrefix": "#{subnetRange}#"
+                        }
+                    }
+                ]
+            }
+        }
+    ],
+    "outputs": {}
+}

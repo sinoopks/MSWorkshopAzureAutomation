@@ -1,0 +1,1 @@
+New-AzResourceGroup -Name $env:RESOURCEGROUPNAME -Location $env:Location -Verbose -Force
